@@ -185,7 +185,6 @@ de exclusión no protegen archivos ya rastreados.
 
 ```powershell
 git commit -m "Entrega final del proyecto de Seguridad de la Informacion II" `
-    -m "Co-authored-by: Copilot <223556219+Copilot@users.noreply.github.com>"
 ```
 
 Después de ese primer commit, y únicamente con autorización de publicación,
