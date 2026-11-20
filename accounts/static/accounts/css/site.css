@@ -1,0 +1,276 @@
+:root {
+  color-scheme: light;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  color: #253247;
+  background: #f5f6f8;
+  line-height: 1.6;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+a {
+  color: #20558a;
+  text-underline-offset: 0.2em;
+}
+
+a:hover {
+  color: #153b61;
+}
+
+:focus-visible {
+  outline: 3px solid #20558a;
+  outline-offset: 3px;
+}
+
+.skip-link {
+  position: absolute;
+  top: -5rem;
+  left: 1rem;
+  padding: 0.6rem 1rem;
+  background: #fff;
+  z-index: 1;
+}
+
+.skip-link:focus {
+  top: 1rem;
+}
+
+.site-header {
+  background: #fff;
+  border-bottom: 1px solid #dfe4eb;
+}
+
+.header-content {
+  max-width: 1120px;
+  margin: auto;
+  padding: 1.1rem 1.5rem;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem 2rem;
+}
+
+.brand {
+  color: #253247;
+  font-weight: 700;
+  font-size: 1.1rem;
+  text-decoration: none;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.5rem 1.2rem;
+  margin-left: auto;
+}
+
+nav a {
+  color: #435168;
+  font-size: 0.95rem;
+  text-decoration: none;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+nav form {
+  margin: 0;
+}
+
+nav button {
+  color: #253247;
+  background: #fff;
+  border-color: #c9d2de;
+}
+
+nav button:hover {
+  color: #253247;
+  background: #eef1f5;
+}
+
+main {
+  width: min(100% - 3rem, 1024px);
+  margin: 2rem auto;
+  padding: clamp(1.25rem, 4vw, 2.5rem);
+  background: #fff;
+  border: 1px solid #dfe4eb;
+  border-radius: 10px;
+  overflow-wrap: anywhere;
+}
+
+h1,
+h2 {
+  color: #1c293c;
+  line-height: 1.25;
+}
+
+h1 {
+  margin: 0 0 1rem;
+  font-size: clamp(1.65rem, 4vw, 2.15rem);
+}
+
+h2 {
+  margin-top: 2rem;
+  font-size: 1.3rem;
+}
+
+main > p {
+  margin: 0 0 1.25rem;
+}
+
+main > a {
+  display: inline-block;
+  margin: 0.25rem 1rem 0.25rem 0;
+}
+
+form {
+  max-width: 640px;
+  margin: 1.25rem 0;
+}
+
+form p {
+  margin: 0 0 1.2rem;
+}
+
+label {
+  display: block;
+  margin-bottom: 0.35rem;
+  font-weight: 600;
+}
+
+input:not([type="hidden"]):not([type="checkbox"]):not([type="radio"]),
+select,
+textarea {
+  width: 100%;
+  min-width: 0;
+  padding: 0.7rem 0.8rem;
+  border: 1px solid #b8c3d1;
+  border-radius: 6px;
+  background: #fff;
+  color: inherit;
+  font: inherit;
+}
+
+textarea {
+  min-height: 10rem;
+  resize: vertical;
+}
+
+input[type="checkbox"],
+input[type="radio"] {
+  accent-color: #20558a;
+}
+
+button,
+.button {
+  display: inline-block;
+  padding: 0.65rem 1rem;
+  border: 1px solid #253e5a;
+  border-radius: 6px;
+  background: #253e5a;
+  color: #fff;
+  font: inherit;
+  font-weight: 600;
+  line-height: 1.4;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+button:hover,
+.button:hover {
+  color: #fff;
+  background: #1a2e45;
+}
+
+button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.helptext {
+  display: block;
+  margin-top: 0.4rem;
+  color: #576579;
+  font-size: 0.9rem;
+}
+
+.errorlist {
+  padding-left: 1.25rem;
+  color: #a12626;
+  font-size: 0.95rem;
+}
+
+[aria-invalid="true"] {
+  border-color: #a12626;
+}
+
+main > ul:not(.errorlist) {
+  padding: 0;
+  margin: 1.5rem 0;
+  list-style: none;
+}
+
+main > ul:not(.errorlist) > li {
+  padding: 1rem 0;
+  border-bottom: 1px solid #e6eaf0;
+}
+
+main > ul > li:first-child {
+  border-top: 1px solid #e6eaf0;
+}
+
+li form {
+  margin: 0.75rem 0 0;
+}
+
+.message {
+  padding: 0.85rem 1rem;
+  border: 1px solid #c9d8e9;
+  border-radius: 6px;
+  background: #f0f5fb;
+}
+
+.message.success {
+  color: #24553b;
+  border-color: #bbd9c7;
+  background: #eff8f2;
+}
+
+.message.error,
+.message.warning {
+  color: #7b3422;
+  border-color: #e4c6b7;
+  background: #fff5ef;
+}
+
+.site-footer {
+  padding: 0 1.5rem 2rem;
+  color: #576579;
+  font-size: 0.85rem;
+  text-align: center;
+}
+
+@media (max-width: 640px) {
+  .header-content {
+    padding: 1rem;
+  }
+
+  nav {
+    width: 100%;
+    margin-left: 0;
+  }
+
+  main {
+    width: calc(100% - 2rem);
+    margin: 1rem auto;
+  }
+}

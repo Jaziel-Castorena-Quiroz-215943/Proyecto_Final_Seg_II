@@ -15,6 +15,13 @@ La navegación puede mostrar etiquetas según el idioma configurado. Las rutas
 siguientes identifican funciones, no autorizan a eludir los formularios.
 No enviar contraseñas, documentos de compra o PDF privados a servicios externos.
 
+La interfaz utiliza estilos locales compartidos: navegación adaptable a pantallas
+pequeñas, formularios y botones uniformes e indicadores de foco para teclado.
+No requiere fuentes, hojas de estilo ni scripts de servicios externos.
+Tras actualizar los estilos, publicar los archivos estáticos con `collectstatic`
+como se indica en la [instalación](INSTALACION.md); Caddy los sirve desde
+`staticfiles/`.
+
 ## 2. Funciones comunes
 
 1. Consultar productos publicados desde `/catalog/`.

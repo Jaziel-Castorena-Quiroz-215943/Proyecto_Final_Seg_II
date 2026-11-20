@@ -1,8 +1,18 @@
+{% load static %}
 <!doctype html>
 <html lang="es">
-<head><meta charset="utf-8"><title>{% block title %}Cuentas{% endblock %}</title></head>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{% block title %}Cuentas{% endblock %}</title>
+  <link rel="stylesheet" href="{% static 'accounts/css/site.css' %}">
+</head>
 <body>
-<nav>
+<a class="skip-link" href="#contenido">Saltar al contenido</a>
+<header class="site-header">
+<div class="header-content">
+<a class="brand" href="{% url 'catalog:home' %}">Contenido digital</a>
+<nav aria-label="Navegación principal">
   <a href="{% url 'catalog:home' %}">Inicio</a>
   <a href="{% url 'catalog:list' %}">Catálogo</a>
   {% if user.is_authenticated %}
@@ -17,7 +27,12 @@
     <a href="{% url 'accounts:register' %}">Registro</a>
   {% endif %}
 </nav>
-{% for message in messages %}<p>{{ message }}</p>{% endfor %}
+</div>
+</header>
+<main id="contenido" tabindex="-1">
+{% for message in messages %}<p class="message {{ message.tags }}" role="status">{{ message }}</p>{% endfor %}
 {% block content %}{% endblock %}
+</main>
+<footer class="site-footer">Plataforma de contenido digital · Proyecto académico</footer>
 </body>
 </html>
