@@ -1,0 +1,13 @@
+{% extends 'accounts/base.html' %}
+{% block title %}Administrar catálogo{% endblock %}
+{% block content %}
+<h1>Administrar catálogo</h1>
+<a href="{% url 'catalog:create' %}">Crear producto</a>
+<ul>
+{% for product in products %}
+  <li><a href="{% url 'catalog:edit' product.pk %}">{{ product.name }}</a> — {{ product.get_status_display }} — {{ product.price }}</li>
+{% empty %}
+  <li>No hay productos.</li>
+{% endfor %}
+</ul>
+{% endblock %}

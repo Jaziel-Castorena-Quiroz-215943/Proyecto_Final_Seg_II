@@ -1,0 +1,54 @@
+﻿{
+  "executed_at": "2026-11-19T17:33:14.824800-06:00",
+  "dotenv_contains_secret_values": false,
+  "example_contains_secret_values": false,
+  "configured_profile": {
+    "DJANGO_DEBUG": "false",
+    "DJANGO_LOCAL_HTTPS": "true",
+    "DJANGO_ALLOWED_HOSTS": "localhost",
+    "DJANGO_RECEIPTS_KEY_ID": "rsa-demo-2026"
+  },
+  "catalog_outside_project": true,
+  "rsa_private_outside_project": true,
+  "active_git_repository_available": false,
+  "git_ignore_rules_verified": 13,
+  "public_verification_keys_distributable": true,
+  "public_text_files_checked_for_private_pem_blocks": 117,
+  "scope_of_secret_check": "No DPAPI decryption, secret-value matching or Git history scan.",
+  "ssh_configuration_read": {
+    "port": "22",
+    "listenaddress": "127.0.0.1",
+    "pubkeyauthentication": "yes",
+    "passwordauthentication": "no",
+    "kbdinteractiveauthentication": "no"
+  },
+  "local_listeners": [
+    {
+      "LocalAddress": "127.0.0.1",
+      "LocalPort": 8443
+    },
+    {
+      "LocalAddress": "127.0.0.1",
+      "LocalPort": 8080
+    },
+    {
+      "LocalAddress": "127.0.0.1",
+      "LocalPort": 8000
+    },
+    {
+      "LocalAddress": "127.0.0.1",
+      "LocalPort": 22
+    }
+  ],
+  "tls_handshake": {
+    "explicit_ca_and_hostname_validated": true,
+    "negotiated_version": "TLSv1.3"
+  },
+  "untrusted_ca_rejected": true,
+  "caddy_http_redirect": {
+    "status": 308,
+    "expected_location": true
+  },
+  "django_check_https_exit_code": 0,
+  "django_check_scope": "Configured HTTPS with ephemeral audit-only secret; no production DPAPI loaded."
+}

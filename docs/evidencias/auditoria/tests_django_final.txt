@@ -1,0 +1,110 @@
+Executed: 2026-11-19T17:33:38.749142-06:00
+Exit code: 0
+Scope: isolated in-memory test DB; temporary PDFs/keys; ephemeral audit-only secret.
+Command: python -B manage.py test accounts catalog cart orders receipts security config docs.evidencias.auditoria.test_controles_auditoria --noinput --verbosity 2
+
+Found 56 test(s).
+Operations to perform:
+  Synchronize unmigrated apps: messages, staticfiles
+  Apply all migrations: accounts, admin, auth, cart, catalog, contenttypes, orders, receipts, security, sessions
+Synchronizing apps without migrations:
+  Creating tables...
+    Running deferred SQL...
+Running migrations:
+  Applying contenttypes.0001_initial... OK
+  Applying contenttypes.0002_remove_content_type_name... OK
+  Applying auth.0001_initial... OK
+  Applying auth.0002_alter_permission_name_max_length... OK
+  Applying auth.0003_alter_user_email_max_length... OK
+  Applying auth.0004_alter_user_username_opts... OK
+  Applying auth.0005_alter_user_last_login_null... OK
+  Applying auth.0006_require_contenttypes_0002... OK
+  Applying auth.0007_alter_validators_add_error_messages... OK
+  Applying auth.0008_alter_user_username_max_length... OK
+  Applying auth.0009_alter_user_last_name_max_length... OK
+  Applying auth.0010_alter_group_name_max_length... OK
+  Applying auth.0011_update_proxy_permissions... OK
+  Applying auth.0012_alter_user_first_name_max_length... OK
+  Applying accounts.0001_initial... OK
+  Applying accounts.0002_alter_securityevent_kind... OK
+  Applying accounts.0003_alter_securityevent_kind... OK
+  Applying accounts.0004_alter_securityevent_kind... OK
+  Applying admin.0001_initial... OK
+  Applying admin.0002_logentry_remove_auto_add... OK
+  Applying admin.0003_logentry_add_action_flag_choices... OK
+  Applying catalog.0001_initial... OK
+  Applying cart.0001_initial... OK
+  Applying orders.0001_initial... OK
+  Applying orders.0002_orderitem_pdf_name_orderitem_pdf_sha256... OK
+  Applying receipts.0001_initial... OK
+  Applying security.0001_initial... OK
+  Applying sessions.0001_initial... OK
+System check identified no issues (0 silenced).
+
+Creating test database for alias 'default' ('file:memorydb_default?mode=memory&cache=shared')...
+
+test_csrf_required_for_state_changing_endpoints (accounts.tests.AccountTests.test_csrf_required_for_state_changing_endpoints) ... ok
+test_email_uniqueness_is_enforced_by_database (accounts.tests.AccountTests.test_email_uniqueness_is_enforced_by_database) ... ok
+test_login_logout_profile_and_security_events (accounts.tests.AccountTests.test_login_logout_profile_and_security_events) ... ok
+test_password_reset_flow_and_one_time_token (accounts.tests.AccountTests.test_password_reset_flow_and_one_time_token) ... ok
+test_password_reset_token_expires_after_one_hour (accounts.tests.AccountTests.test_password_reset_token_expires_after_one_hour) ... ok
+test_privileged_admin_and_audit_are_superuser_only (accounts.tests.AccountTests.test_privileged_admin_and_audit_are_superuser_only) ... ok
+test_registration_enforces_validation_and_ignores_privilege_fields (accounts.tests.AccountTests.test_registration_enforces_validation_and_ignores_privilege_fields) ... ok
+test_superuser_can_create_operator_in_admin (accounts.tests.AccountTests.test_superuser_can_create_operator_in_admin) ... ok
+test_create_edit_and_private_storage_with_server_calculated_hash (catalog.tests.CatalogTests.test_create_edit_and_private_storage_with_server_calculated_hash) ... ok
+test_csrf_required_for_create_and_edit (catalog.tests.CatalogTests.test_csrf_required_for_create_and_edit) ... ok
+test_exact_maximum_file_size_is_accepted (catalog.tests.CatalogTests.test_exact_maximum_file_size_is_accepted) ... ok
+test_home_public_catalog_and_unpublished_detail (catalog.tests.CatalogTests.test_home_public_catalog_and_unpublished_detail) ... ok
+test_invalid_uploads_are_rejected_without_writing_files (catalog.tests.CatalogTests.test_invalid_uploads_are_rejected_without_writing_files) ... ok
+test_only_active_operator_can_manage_even_when_not_staff (catalog.tests.CatalogTests.test_only_active_operator_can_manage_even_when_not_staff) ... ok
+test_price_status_and_required_fields_are_validated (catalog.tests.CatalogTests.test_price_status_and_required_fields_are_validated) ... ok
+test_cart_idempotency_price_snapshot_and_repurchase (orders.tests.PurchaseTests.test_cart_idempotency_price_snapshot_and_repurchase) ... ok
+test_csrf_is_required_and_valid_tokens_work (orders.tests.PurchaseTests.test_csrf_is_required_and_valid_tokens_work) ... ok
+test_database_failures_roll_back_checkout_and_payment (orders.tests.PurchaseTests.test_database_failures_roll_back_checkout_and_payment) ... ok
+test_existing_inconsistent_payment_is_never_accepted_or_overwritten (orders.tests.PurchaseTests.test_existing_inconsistent_payment_is_never_accepted_or_overwritten) ... ok
+test_expired_quote_and_changed_cart_are_rejected (orders.tests.PurchaseTests.test_expired_quote_and_changed_cart_are_rejected) ... ok
+test_owner_isolation_and_operator_read_only (orders.tests.PurchaseTests.test_owner_isolation_and_operator_read_only) ... ok
+test_payment_once_success_and_failure (orders.tests.PurchaseTests.test_payment_once_success_and_failure) ... ok
+test_stale_tampered_and_foreign_quotes_are_rejected (orders.tests.PurchaseTests.test_stale_tampered_and_foreign_quotes_are_rejected) ... ok
+test_unavailable_and_changed_cart_cannot_be_checked_out (orders.tests.PurchaseTests.test_unavailable_and_changed_cart_cannot_be_checked_out) ... ok
+test_access_and_verification_with_csrf (receipts.tests.ReceiptTests.test_access_and_verification_with_csrf) ... ok
+test_changed_order_or_payment_invalidates_stored_receipt (receipts.tests.ReceiptTests.test_changed_order_or_payment_invalidates_stored_receipt) ... ok
+test_failed_or_unconfigured_payment_does_not_issue_receipt (receipts.tests.ReceiptTests.test_failed_or_unconfigured_payment_does_not_issue_receipt) ... ok
+test_historical_success_is_not_reissued_on_retry (receipts.tests.ReceiptTests.test_historical_success_is_not_reissued_on_retry) ... ok
+test_key_mismatch_and_order_inconsistency_fail_closed (receipts.tests.ReceiptTests.test_key_mismatch_and_order_inconsistency_fail_closed) ... ok
+test_receipt_is_signed_with_real_asymmetric_key_and_idempotent (receipts.tests.ReceiptTests.test_receipt_is_signed_with_real_asymmetric_key_and_idempotent) ... ok
+test_receipt_write_failure_rolls_back_payment (receipts.tests.ReceiptTests.test_receipt_write_failure_rolls_back_payment) ... ok
+test_rotation_retains_old_public_key_and_missing_key_is_explicit (receipts.tests.ReceiptTests.test_rotation_retains_old_public_key_and_missing_key_is_explicit) ... ok
+test_tampering_and_untrusted_keys_fail (receipts.tests.ReceiptTests.test_tampering_and_untrusted_keys_fail) ... ok
+test_audit_failure_rolls_back_issued_fingerprint (security.tests.FingerprintTests.test_audit_failure_rolls_back_issued_fingerprint) ... ok
+test_csrf_required_for_download_and_extraction (security.tests.FingerprintTests.test_csrf_required_for_download_and_extraction) ... ok
+test_documents_with_signature_fields_are_not_modified (security.tests.FingerprintTests.test_documents_with_signature_fields_are_not_modified) ... ok
+test_download_requires_owner_approved_payment_and_client_role (security.tests.FingerprintTests.test_download_requires_owner_approved_payment_and_client_role) ... ok
+test_extraction_rejects_files_over_size_limit (security.tests.FingerprintTests.test_extraction_rejects_files_over_size_limit) ... ok
+test_legacy_or_altered_original_is_rejected (security.tests.FingerprintTests.test_legacy_or_altered_original_is_rejected) ... No se pudo generar el PDF personalizado: La orden no tiene una versión de PDF registrada.
+No se pudo generar el PDF personalizado: El PDF original no coincide con la versión comprada.
+ok
+test_original_version_is_preserved_when_catalog_product_changes (security.tests.FingerprintTests.test_original_version_is_preserved_when_catalog_product_changes) ... ok
+test_paid_downloads_are_unique_traceable_and_preserve_original_and_receipt (security.tests.FingerprintTests.test_paid_downloads_are_unique_traceable_and_preserve_original_and_receipt) ... ok
+test_reserved_marker_in_original_is_not_overwritten (security.tests.FingerprintTests.test_reserved_marker_in_original_is_not_overwritten) ... ok
+test_small_page_keeps_visible_and_recoverable_marker (security.tests.FingerprintTests.test_small_page_keeps_visible_and_recoverable_marker) ... ok
+test_superuser_can_extract_only_an_unmodified_issued_pdf (security.tests.FingerprintTests.test_superuser_can_extract_only_an_unmodified_issued_pdf) ... ok
+test_anonymous_management_pages_require_authentication (docs.evidencias.auditoria.test_controles_auditoria.AuditControlTests.test_anonymous_management_pages_require_authentication) ... ok
+test_https_login_session_cookie_and_security_headers (docs.evidencias.auditoria.test_controles_auditoria.AuditControlTests.test_https_login_session_cookie_and_security_headers) ... ok
+test_roles_do_not_implicitly_grant_superuser_access (docs.evidencias.auditoria.test_controles_auditoria.AuditControlTests.test_roles_do_not_implicitly_grant_superuser_access) ... ok
+test_concurrent_checkout_and_payment_do_not_duplicate (orders.tests.ConcurrentPurchaseTests.test_concurrent_checkout_and_payment_do_not_duplicate) ... ok
+test_dotenv_is_loaded_from_project_root_not_working_directory (config.tests.DotenvSettingsTests.test_dotenv_is_loaded_from_project_root_not_working_directory) ... ok
+test_existing_environment_takes_precedence_over_dotenv (config.tests.DotenvSettingsTests.test_existing_environment_takes_precedence_over_dotenv) ... ok
+test_csrf_requires_token_and_same_secure_origin (config.tests.LocalHTTPSBehaviorTests.test_csrf_requires_token_and_same_secure_origin) ... ok
+test_https_proxy_does_not_redirect_and_http_does (config.tests.LocalHTTPSBehaviorTests.test_https_proxy_does_not_redirect_and_http_does) ... ok
+test_session_cookie_is_secure (config.tests.LocalHTTPSBehaviorTests.test_session_cookie_is_secure) ... ok
+test_https_profile_configures_proxy_redirect_and_secure_cookies (config.tests.LocalHTTPSSettingsTests.test_https_profile_configures_proxy_redirect_and_secure_cookies) ... ok
+test_https_profile_is_opt_in (config.tests.LocalHTTPSSettingsTests.test_https_profile_is_opt_in) ... ok
+test_https_profile_rejects_debug (config.tests.LocalHTTPSSettingsTests.test_https_profile_rejects_debug) ... ok
+
+----------------------------------------------------------------------
+Ran 56 tests in 21.415s
+
+OK
+Destroying test database for alias 'default' ('file:memorydb_default?mode=memory&cache=shared')...
+

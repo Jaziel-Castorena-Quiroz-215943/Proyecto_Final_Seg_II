@@ -1,0 +1,10 @@
+{% extends 'accounts/base.html' %}
+{% block title %}Órdenes{% endblock %}
+{% block content %}
+<h1>Órdenes</h1>
+<ul>
+{% for order in orders %}
+<li><a href="{% url 'orders:detail' order.pk %}">Orden {{ order.pk }}</a> — {{ order.get_status_display }} — {{ order.total }}</li>
+{% empty %}<li>No hay órdenes.</li>{% endfor %}
+</ul>
+{% endblock %}

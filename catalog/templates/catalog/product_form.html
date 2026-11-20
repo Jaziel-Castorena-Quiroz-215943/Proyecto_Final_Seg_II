@@ -1,0 +1,11 @@
+{% extends 'accounts/base.html' %}
+{% block title %}{{ title }}{% endblock %}
+{% block content %}
+<h1>{{ title }}</h1>
+{% if product %}<p>SHA-256 del archivo actual: {{ product.sha256 }}</p>{% endif %}
+<form method="post" enctype="multipart/form-data">
+  {% csrf_token %}
+  {{ form.as_p }}
+  <button type="submit">Guardar</button>
+</form>
+{% endblock %}

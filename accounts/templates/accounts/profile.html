@@ -1,0 +1,12 @@
+{% extends 'accounts/base.html' %}
+{% block title %}Perfil{% endblock %}
+{% block content %}
+<h1>Perfil</h1>
+<p>Usuario: {{ user.username }}</p>
+<p>Rol: {{ user.get_role_display }}</p>
+<form method="post">
+  {% csrf_token %}
+  {{ form.as_p }}
+  <button type="submit">Guardar</button>
+</form>
+{% endblock %}

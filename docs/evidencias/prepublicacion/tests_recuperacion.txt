@@ -1,0 +1,15 @@
+Executed: 2026-11-19T18:19:23.282328-06:00
+Exit code: 0
+Scope: synthetic recovery fixtures only.
+
+
+test_altered_or_incomplete_copy_is_rejected_without_touching_valid_backup (test_recovery.RecoveryTests.test_altered_or_incomplete_copy_is_rejected_without_touching_valid_backup) ... ok
+test_invalid_relationships_are_rejected (test_recovery.RecoveryTests.test_invalid_relationships_are_rejected) ... ok
+test_known_gaps_require_explicit_permission_at_backup_and_restore (test_recovery.RecoveryTests.test_known_gaps_require_explicit_permission_at_backup_and_restore) ... ok
+test_manifest_paths_and_pin_are_validated_even_if_hashes_are_recomputed (test_recovery.RecoveryTests.test_manifest_paths_and_pin_are_validated_even_if_hashes_are_recomputed) ... ok
+test_roundtrip_is_repeatable_without_overwriting_source_or_destination (test_recovery.RecoveryTests.test_roundtrip_is_repeatable_without_overwriting_source_or_destination) ... ok
+
+----------------------------------------------------------------------
+Ran 5 tests in 1.305s
+
+OK

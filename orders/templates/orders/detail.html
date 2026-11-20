@@ -1,0 +1,31 @@
+{% extends 'accounts/base.html' %}
+{% block title %}Orden {{ order.pk }}{% endblock %}
+{% block content %}
+<h1>Orden {{ order.pk }}</h1>
+{% if user.role == 'OPERADOR' %}<p>Cliente: {{ order.user.username }}</p>{% endif %}
+<p>Estado: {{ order.get_status_display }}</p>
+<ul>{% for item in order.items.all %}
+<li>
+  {{ item.product_name }} — {{ item.unit_price }}
+  {% if user.role == 'CLIENTE' and order.status == 'PAID' and item.pdf_name and item.pdf_sha256 %}
+  <form method="post" action="{% url 'security:download' item.pk %}">
+    {% csrf_token %}<button type="submit">Descargar PDF personalizado</button>
+  </form>
+  {% elif user.role == 'CLIENTE' and order.status == 'PAID' %}
+  <span>Esta orden no tiene una versión de PDF registrada.</span>
+  {% endif %}
+</li>
+{% endfor %}</ul>
+<p>Total: {{ order.total }}</p>
+{% if order.payment.receipt %}
+<a href="{% url 'receipts:detail' order.payment.receipt.pk %}">Ver comprobante firmado</a>
+{% endif %}
+{% if user.role == 'CLIENTE' and order.status == 'PENDING' %}
+<p>Pago exclusivamente simulado: no se solicitarán datos bancarios ni se realizará un cargo real.</p>
+<form method="post" action="{% url 'orders:pay' order.pk %}">
+  {% csrf_token %}
+  <button type="submit" name="result" value="SUCCESS">Simular éxito</button>
+  <button type="submit" name="result" value="FAILURE">Simular fallo</button>
+</form>
+{% endif %}
+{% endblock %}

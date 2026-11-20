@@ -1,0 +1,29 @@
+{
+	admin off
+	skip_install_trust
+	auto_https disable_redirects
+}
+
+https://localhost:8443 {
+	bind 127.0.0.1
+	tls internal
+
+	handle_path /static/* {
+		root * staticfiles
+		file_server
+	}
+
+	handle {
+		reverse_proxy 127.0.0.1:8000 {
+			header_up X-Forwarded-Proto https
+			header_up -Forwarded
+			header_up -X-Forwarded-Host
+			header_up -X-Forwarded-Port
+		}
+	}
+}
+
+http://localhost:8080 {
+	bind 127.0.0.1
+	redir https://localhost:8443{uri} 308
+}

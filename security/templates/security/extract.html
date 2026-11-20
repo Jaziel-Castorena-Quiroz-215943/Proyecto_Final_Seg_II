@@ -1,0 +1,17 @@
+{% extends 'accounts/base.html' %}
+{% block title %}Extraer huella{% endblock %}
+{% block content %}
+<h1>Extraer huella</h1>
+<form method="post" enctype="multipart/form-data">
+  {% csrf_token %}
+  {{ form.as_p }}
+  <button type="submit">Identificar</button>
+</form>
+{% if download %}
+<h2>Descarga identificada</h2>
+<p>Usuario: {{ download.user.username }}</p>
+<p>Orden: {{ download.order_item.order_id }}</p>
+<p>Producto: {{ download.order_item.product_name }}</p>
+<p>Emitida: {{ download.created_at }}</p>
+{% endif %}
+{% endblock %}

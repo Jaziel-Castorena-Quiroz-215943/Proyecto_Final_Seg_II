@@ -1,0 +1,25 @@
+{% extends 'accounts/base.html' %}
+{% block title %}Carrito{% endblock %}
+{% block content %}
+<h1>Carrito</h1>
+<ul>
+{% for product in products %}
+<li>
+  {{ product.name }} — {{ product.price }}
+  {% if product.status != 'PUBLISHED' %}(No disponible){% endif %}
+  <form method="post" action="{% url 'cart:remove' product.pk %}">
+    {% csrf_token %}<button type="submit">Eliminar</button>
+  </form>
+</li>
+{% empty %}<li>El carrito está vacío.</li>{% endfor %}
+</ul>
+<p>Total: {{ total }}</p>
+{% if products and available %}
+<form method="post" action="{% url 'orders:checkout' %}">
+  {% csrf_token %}
+  <input type="hidden" name="key" value="{{ cart.checkout_key }}">
+  <input type="hidden" name="quote" value="{{ quote }}">
+  <button type="submit">Crear orden</button>
+</form>
+{% endif %}
+{% endblock %}

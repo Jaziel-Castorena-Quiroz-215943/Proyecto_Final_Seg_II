@@ -1,0 +1,14 @@
+{% extends 'accounts/base.html' %}
+{% block title %}Comprobante{% endblock %}
+{% block content %}
+<h1>Comprobante firmado</h1>
+<p>Firma verificada con la clave pública configurada.</p>
+<p>Comprobante: {{ body.receipt_id }}</p>
+<p>Orden: {{ body.order_id }}</p>
+<p>Pago simulado: {{ body.payment_result }}</p>
+<ul>{% for item in body.items %}<li>{{ item.name }} — {{ item.unit_price }}</li>{% endfor %}</ul>
+<p>Total: {{ body.total }}</p>
+<p>Emitido: {{ body.issued_at }}</p>
+<a href="{% url 'receipts:document' receipt.pk %}">Ver documento JSON firmado</a>
+<a href="{% url 'receipts:verify' %}">Verificar un documento</a>
+{% endblock %}

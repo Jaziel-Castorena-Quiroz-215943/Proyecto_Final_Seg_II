@@ -1,0 +1,103 @@
+﻿{
+  "executed_at": "2026-11-19T17:35:31.234530-06:00",
+  "database": {
+    "counts": {
+      "users": 3,
+      "products": 6,
+      "orders": 8,
+      "payments": 7,
+      "receipts": 5,
+      "fingerprints": 4
+    },
+    "integrity_check": "ok",
+    "foreign_key_check": []
+  },
+  "availability_and_impact": {
+    "missing_product_pdf_references": 4,
+    "available_product_pdf_references": 2,
+    "unversioned_order_items": 4,
+    "paid_unversioned_order_items": 3,
+    "unversioned_read_original_rejected": 4,
+    "missing_order_pdf_references": 5,
+    "paid_missing_order_pdf_references": 4,
+    "missing_read_original_rejected": 5,
+    "available_order_pdf_references_verified": 3,
+    "distinct_missing_pdf_files": 4,
+    "receipts_unverifiable_missing_public_key": 2,
+    "stored_receipts_verified_including_relationships": 3
+  },
+  "missing_public_key_ids": [
+    "rsa-2026"
+  ],
+  "configured_public_key": {
+    "key_id": "rsa-demo-2026",
+    "rsa_bits": 3072
+  },
+  "security_events_by_kind": {
+    "DOWNLOAD_CREATED": 4,
+    "DOWNLOAD_ERROR": 2,
+    "FINGERPRINT_EXTRACTED": 3,
+    "LOGIN": 22,
+    "LOGIN_FAILED": 4,
+    "LOGOUT": 17,
+    "ORDER_CREATED": 8,
+    "PAYMENT_FAILED": 1,
+    "PAYMENT_SUCCEEDED": 6,
+    "PROFILE_UPDATED": 4,
+    "RECEIPT_ERROR": 2,
+    "RECEIPT_ISSUED": 5,
+    "RECEIPT_VERIFIED": 3
+  },
+  "configured_https_profile": {
+    "debug": false,
+    "local_https": true,
+    "secure_session_cookie": true,
+    "secure_csrf_cookie": true,
+    "csrf_trusted_origins": [
+      "https://localhost:8443"
+    ]
+  },
+  "backup_data_files_verified": 8,
+  "existing_restorations_reverified": 3,
+  "restored_database_states": {
+    "prueba-real-01": {
+      "counts": {
+        "fingerprints": 4,
+        "orders": 8,
+        "payments": 7,
+        "products": 6,
+        "receipts": 5,
+        "users": 3
+      },
+      "foreign_key_check": [],
+      "integrity_check": "ok"
+    },
+    "prueba-real-02": {
+      "counts": {
+        "fingerprints": 4,
+        "orders": 8,
+        "payments": 7,
+        "products": 6,
+        "receipts": 5,
+        "users": 3
+      },
+      "foreign_key_check": [],
+      "integrity_check": "ok"
+    },
+    "prueba-sin-fuentes-03": {
+      "counts": {
+        "fingerprints": 4,
+        "orders": 8,
+        "payments": 7,
+        "products": 6,
+        "receipts": 5,
+        "users": 3
+      },
+      "foreign_key_check": [],
+      "integrity_check": "ok"
+    }
+  },
+  "existing_altered_copy_rejected": true,
+  "database_sha256_unchanged": true,
+  "scope": "Only aggregate data; active database opened read-only; no HTTP requests to Django."
+}

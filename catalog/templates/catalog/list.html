@@ -1,0 +1,12 @@
+{% extends 'accounts/base.html' %}
+{% block title %}Catálogo{% endblock %}
+{% block content %}
+<h1>Catálogo</h1>
+<ul>
+{% for product in products %}
+  <li><a href="{% url 'catalog:detail' product.pk %}">{{ product.name }}</a> — {{ product.price }}</li>
+{% empty %}
+  <li>No hay productos publicados.</li>
+{% endfor %}
+</ul>
+{% endblock %}

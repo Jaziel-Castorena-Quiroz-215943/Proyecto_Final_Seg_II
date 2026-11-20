@@ -1,0 +1,381 @@
+{
+  "executed_at": "2026-11-19T18:22:55.345887-06:00",
+  "git": {
+    "branch": "main",
+    "commits": 0,
+    "remotes": 0,
+    "preexisting_repository_or_history": false,
+    "staged_files": 140
+  },
+  "publishable_file_count": 140,
+  "ignored_file_count": 10945,
+  "gitignore_cases_passed": 33,
+  "internal_links_checked": 171,
+  "embedded_python_blocks_parsed": 4,
+  "preexisting_files_preserved": 147,
+  "authorized_existing_changes": [
+    ".gitignore",
+    "README.md"
+  ],
+  "original_database_and_encrypted_secrets_unchanged": true,
+  "classified_matches_without_values": [
+    {
+      "archivo": ".env.example",
+      "linea": 6,
+      "tipo": "ruta_ilustrativa_documentada",
+      "decision": "conservar_como_ejemplo_no_dependencia"
+    },
+    {
+      "archivo": ".env.example",
+      "linea": 8,
+      "tipo": "ruta_ilustrativa_documentada",
+      "decision": "conservar_como_ejemplo_no_dependencia"
+    },
+    {
+      "archivo": ".env.example",
+      "linea": 9,
+      "tipo": "ruta_ilustrativa_documentada",
+      "decision": "conservar_como_ejemplo_no_dependencia"
+    },
+    {
+      "archivo": ".env.example",
+      "linea": 13,
+      "tipo": "ruta_ilustrativa_documentada",
+      "decision": "conservar_como_ejemplo_no_dependencia"
+    },
+    {
+      "archivo": ".env.example",
+      "linea": 14,
+      "tipo": "ruta_ilustrativa_documentada",
+      "decision": "conservar_como_ejemplo_no_dependencia"
+    },
+    {
+      "archivo": "README.md",
+      "linea": 174,
+      "tipo": "correo_de_fixture_o_atribucion_publica",
+      "decision": "sin_identidad_personal_del_proyecto"
+    },
+    {
+      "archivo": "README.md",
+      "linea": 188,
+      "tipo": "correo_de_fixture_o_atribucion_publica",
+      "decision": "sin_identidad_personal_del_proyecto"
+    },
+    {
+      "archivo": "accounts/tests.py",
+      "linea": 20,
+      "tipo": "credencial_sintetica_de_fixture",
+      "decision": "no_es_credencial_de_instancia"
+    },
+    {
+      "archivo": "accounts/tests.py",
+      "linea": 27,
+      "tipo": "correo_de_fixture_o_atribucion_publica",
+      "decision": "sin_identidad_personal_del_proyecto"
+    },
+    {
+      "archivo": "accounts/tests.py",
+      "linea": 32,
+      "tipo": "correo_de_fixture_o_atribucion_publica",
+      "decision": "sin_identidad_personal_del_proyecto"
+    },
+    {
+      "archivo": "accounts/tests.py",
+      "linea": 38,
+      "tipo": "correo_de_fixture_o_atribucion_publica",
+      "decision": "sin_identidad_personal_del_proyecto"
+    },
+    {
+      "archivo": "accounts/tests.py",
+      "linea": 45,
+      "tipo": "correo_de_fixture_o_atribucion_publica",
+      "decision": "sin_identidad_personal_del_proyecto"
+    },
+    {
+      "archivo": "accounts/tests.py",
+      "linea": 56,
+      "tipo": "correo_de_fixture_o_atribucion_publica",
+      "decision": "sin_identidad_personal_del_proyecto"
+    },
+    {
+      "archivo": "accounts/tests.py",
+      "linea": 67,
+      "tipo": "correo_de_fixture_o_atribucion_publica",
+      "decision": "sin_identidad_personal_del_proyecto"
+    },
+    {
+      "archivo": "accounts/tests.py",
+      "linea": 72,
+      "tipo": "correo_de_fixture_o_atribucion_publica",
+      "decision": "sin_identidad_personal_del_proyecto"
+    },
+    {
+      "archivo": "accounts/tests.py",
+      "linea": 90,
+      "tipo": "correo_de_fixture_o_atribucion_publica",
+      "decision": "sin_identidad_personal_del_proyecto"
+    },
+    {
+      "archivo": "accounts/tests.py",
+      "linea": 99,
+      "tipo": "correo_de_fixture_o_atribucion_publica",
+      "decision": "sin_identidad_personal_del_proyecto"
+    },
+    {
+      "archivo": "accounts/tests.py",
+      "linea": 140,
+      "tipo": "correo_de_fixture_o_atribucion_publica",
+      "decision": "sin_identidad_personal_del_proyecto"
+    },
+    {
+      "archivo": "accounts/tests.py",
+      "linea": 159,
+      "tipo": "correo_de_fixture_o_atribucion_publica",
+      "decision": "sin_identidad_personal_del_proyecto"
+    },
+    {
+      "archivo": "accounts/tests.py",
+      "linea": 162,
+      "tipo": "correo_de_fixture_o_atribucion_publica",
+      "decision": "sin_identidad_personal_del_proyecto"
+    },
+    {
+      "archivo": "catalog/tests.py",
+      "linea": 45,
+      "tipo": "credencial_sintetica_de_fixture",
+      "decision": "no_es_credencial_de_instancia"
+    },
+    {
+      "archivo": "catalog/tests.py",
+      "linea": 45,
+      "tipo": "correo_de_fixture_o_atribucion_publica",
+      "decision": "sin_identidad_personal_del_proyecto"
+    },
+    {
+      "archivo": "catalog/tests.py",
+      "linea": 78,
+      "tipo": "credencial_sintetica_de_fixture",
+      "decision": "no_es_credencial_de_instancia"
+    },
+    {
+      "archivo": "config/HTTPS_LOCAL.md",
+      "linea": 46,
+      "tipo": "ruta_ilustrativa_documentada",
+      "decision": "conservar_como_ejemplo_no_dependencia"
+    },
+    {
+      "archivo": "config/HTTPS_LOCAL.md",
+      "linea": 84,
+      "tipo": "ruta_ilustrativa_documentada",
+      "decision": "conservar_como_ejemplo_no_dependencia"
+    },
+    {
+      "archivo": "config/HTTPS_LOCAL.md",
+      "linea": 112,
+      "tipo": "ruta_ilustrativa_documentada",
+      "decision": "conservar_como_ejemplo_no_dependencia"
+    },
+    {
+      "archivo": "config/settings.py",
+      "linea": 35,
+      "tipo": "fallback_de_desarrollo_condicionado_a_debug",
+      "decision": "revisado_no_secreto_de_la_instancia"
+    },
+    {
+      "archivo": "docs/INSTALACION.md",
+      "linea": 37,
+      "tipo": "ruta_ilustrativa_documentada",
+      "decision": "conservar_como_ejemplo_no_dependencia"
+    },
+    {
+      "archivo": "docs/evidencias/auditoria/test_controles_auditoria.py",
+      "linea": 35,
+      "tipo": "correo_de_fixture_o_atribucion_publica",
+      "decision": "sin_identidad_personal_del_proyecto"
+    },
+    {
+      "archivo": "orders/tests.py",
+      "linea": 34,
+      "tipo": "credencial_sintetica_de_fixture",
+      "decision": "no_es_credencial_de_instancia"
+    },
+    {
+      "archivo": "orders/tests.py",
+      "linea": 34,
+      "tipo": "correo_de_fixture_o_atribucion_publica",
+      "decision": "sin_identidad_personal_del_proyecto"
+    },
+    {
+      "archivo": "orders/tests.py",
+      "linea": 35,
+      "tipo": "credencial_sintetica_de_fixture",
+      "decision": "no_es_credencial_de_instancia"
+    },
+    {
+      "archivo": "orders/tests.py",
+      "linea": 35,
+      "tipo": "correo_de_fixture_o_atribucion_publica",
+      "decision": "sin_identidad_personal_del_proyecto"
+    },
+    {
+      "archivo": "orders/tests.py",
+      "linea": 37,
+      "tipo": "credencial_sintetica_de_fixture",
+      "decision": "no_es_credencial_de_instancia"
+    },
+    {
+      "archivo": "orders/tests.py",
+      "linea": 37,
+      "tipo": "correo_de_fixture_o_atribucion_publica",
+      "decision": "sin_identidad_personal_del_proyecto"
+    },
+    {
+      "archivo": "orders/tests.py",
+      "linea": 39,
+      "tipo": "correo_de_fixture_o_atribucion_publica",
+      "decision": "sin_identidad_personal_del_proyecto"
+    },
+    {
+      "archivo": "orders/tests.py",
+      "linea": 211,
+      "tipo": "credencial_sintetica_de_fixture",
+      "decision": "no_es_credencial_de_instancia"
+    },
+    {
+      "archivo": "orders/tests.py",
+      "linea": 211,
+      "tipo": "correo_de_fixture_o_atribucion_publica",
+      "decision": "sin_identidad_personal_del_proyecto"
+    },
+    {
+      "archivo": "receipts/tests.py",
+      "linea": 34,
+      "tipo": "credencial_sintetica_de_fixture",
+      "decision": "no_es_credencial_de_instancia"
+    },
+    {
+      "archivo": "receipts/tests.py",
+      "linea": 34,
+      "tipo": "correo_de_fixture_o_atribucion_publica",
+      "decision": "sin_identidad_personal_del_proyecto"
+    },
+    {
+      "archivo": "receipts/tests.py",
+      "linea": 35,
+      "tipo": "credencial_sintetica_de_fixture",
+      "decision": "no_es_credencial_de_instancia"
+    },
+    {
+      "archivo": "receipts/tests.py",
+      "linea": 35,
+      "tipo": "correo_de_fixture_o_atribucion_publica",
+      "decision": "sin_identidad_personal_del_proyecto"
+    },
+    {
+      "archivo": "receipts/tests.py",
+      "linea": 37,
+      "tipo": "credencial_sintetica_de_fixture",
+      "decision": "no_es_credencial_de_instancia"
+    },
+    {
+      "archivo": "receipts/tests.py",
+      "linea": 37,
+      "tipo": "correo_de_fixture_o_atribucion_publica",
+      "decision": "sin_identidad_personal_del_proyecto"
+    },
+    {
+      "archivo": "receipts/tests.py",
+      "linea": 116,
+      "tipo": "correo_de_fixture_o_atribucion_publica",
+      "decision": "sin_identidad_personal_del_proyecto"
+    },
+    {
+      "archivo": "scripts/test_recovery.py",
+      "linea": 99,
+      "tipo": "ruta_ilustrativa_documentada",
+      "decision": "conservar_como_ejemplo_no_dependencia"
+    },
+    {
+      "archivo": "security/tests.py",
+      "linea": 51,
+      "tipo": "credencial_sintetica_de_fixture",
+      "decision": "no_es_credencial_de_instancia"
+    },
+    {
+      "archivo": "security/tests.py",
+      "linea": 51,
+      "tipo": "correo_de_fixture_o_atribucion_publica",
+      "decision": "sin_identidad_personal_del_proyecto"
+    },
+    {
+      "archivo": "security/tests.py",
+      "linea": 52,
+      "tipo": "credencial_sintetica_de_fixture",
+      "decision": "no_es_credencial_de_instancia"
+    },
+    {
+      "archivo": "security/tests.py",
+      "linea": 52,
+      "tipo": "correo_de_fixture_o_atribucion_publica",
+      "decision": "sin_identidad_personal_del_proyecto"
+    },
+    {
+      "archivo": "security/tests.py",
+      "linea": 54,
+      "tipo": "credencial_sintetica_de_fixture",
+      "decision": "no_es_credencial_de_instancia"
+    },
+    {
+      "archivo": "security/tests.py",
+      "linea": 54,
+      "tipo": "correo_de_fixture_o_atribucion_publica",
+      "decision": "sin_identidad_personal_del_proyecto"
+    },
+    {
+      "archivo": "security/tests.py",
+      "linea": 56,
+      "tipo": "correo_de_fixture_o_atribucion_publica",
+      "decision": "sin_identidad_personal_del_proyecto"
+    }
+  ],
+  "blocking_matches": [],
+  "dependencies": {
+    "pinned_packages": 23,
+    "public_versions_available": 23,
+    "scope": "Public metadata only; not a clean install or full dependency resolution."
+  },
+  "tests": {
+    "executed_at": "2026-11-19T18:19:49.910536-06:00",
+    "django_check": {
+      "exit_code": 0,
+      "output": "System check identified no issues (0 silenced).",
+      "profile": "HTTPS configured with an ephemeral secret; no production secret loaded"
+    },
+    "pip_check": {
+      "exit_code": 0,
+      "output": "No broken requirements found."
+    },
+    "django_tests": {
+      "exit_code": 0,
+      "in_memory_database_confirmed": true,
+      "test_count": 56
+    },
+    "recovery_tests": {
+      "exit_code": 0,
+      "test_count": 5,
+      "scope": "Synthetic data only; no production backup changed."
+    },
+    "git_whitespace_check": {
+      "initial_exit_code": 2,
+      "reason": "Intentional Markdown hard breaks and blank endings in preserved logs.",
+      "final_exit_code": 0,
+      "treatment": "Scoped .gitattributes whitespace rules; original evidence bytes unchanged."
+    }
+  },
+  "remaining_limits": [
+    "Clean installation on a second Windows account/computer not executed.",
+    "DPAPI recovery between computers not executed; new setup creates its own secrets.",
+    "Public-license and distribution decisions remain with the author.",
+    "Secret scanning uses targeted patterns plus manual classification, not a proof of absence."
+  ]
+}
